@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 type AnimationStatus = 'dismissed' | 'animating' | 'completed';
 
+declare let _flutter: any;
 
 function FlutterWidget(props: {dirName: string, height: number}) {
 
