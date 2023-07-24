@@ -4,10 +4,17 @@ import { GetStaticPaths, GetStaticPropsContext } from "next"
 import Head from 'next/head'
 import { getFileBySlug } from '../../src/components/mdx'
 import MdxComponent from '../../src/components/mdx/MDXComponent';
+import { useState, useEffect } from 'react';
 
 
 export default function Post({ post }: any){
     const { mdxSource, frontMatter } = post
+
+    const [ date, setDate ] = useState('');
+
+    useEffect(() => {
+        setDate(new Date(frontMatter.date).toLocaleDateString());
+    }, []);
     
     return (
         <>
@@ -17,7 +24,7 @@ export default function Post({ post }: any){
             
             <div className='container px-2 pt-24 mx-auto sm:px-4'>
                 <div className='py-10 text-center border-b-2'>
-                    <h2 className=''>{new Date(frontMatter.date).toLocaleDateString()}</h2>
+                    <h2 className=''>{date}</h2>
                     <h1 className='text-6xl'>{frontMatter.title}</h1>    
                 </div>
                 
