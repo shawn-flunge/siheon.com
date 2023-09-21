@@ -8,7 +8,7 @@ import DefaultLayout from '../src/layouts/DefaultLayout';
 
 export default function App({ Component, pageProps }: AppProps){
     return (
-        <DefaultLayout>
+        <DefaultLayout >
             <Component {...pageProps} />    
         </DefaultLayout>
     )

@@ -1,47 +1,13 @@
 
 
 
-
-/* html,body {
-  max-width: 520px;
-  width: 100%;
-  margin: 0 auto;
-} */
-
-
 main {
   flex-grow: 1;
   min-height: 80vh;
 }
 
-/* .header {
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-}
-
-.content {
-  width: 100%;
-  margin: 0 auto;
-} */
 
 @tailwind base;
-
-@layer base{
-  @font-face {
-    font-family: "Pretendard";
-    src: url('/fonts/PretendardVariable.woff2');
-    /* font-weight: normal;
-    font-style: normal; */
-  }
-
-  html {
-    font-family: Pretendard
-  }
-}
-
-
 
 
 @tailwind components;
