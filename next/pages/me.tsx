@@ -1,6 +1,4 @@
 
-import FlutterWidget from '@/components/FlutterWidget';
-
 
 export default function Me(){
 
