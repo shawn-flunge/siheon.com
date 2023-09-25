@@ -6,13 +6,11 @@ import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypePrism from 'rehype-prism'
 import readingTime from 'reading-time'
-import remark from 'remark';
 import remarkCodeTitles from './remark/remark-title';
 import remarkExtractFrontmatter from './remark/remark-extract-fromtmatter'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib'
 import matter from 'gray-matter'
-import { data } from 'autoprefixer'
 import { FrontMatter } from '../card';
 import { json } from 'stream/consumers'
 
