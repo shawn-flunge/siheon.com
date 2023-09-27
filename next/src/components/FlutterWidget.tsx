@@ -10,6 +10,8 @@ function FlutterWidget(props: {dirName: string, height: number}) {
     const height = props.height;
     
     const [status, setAnimState] = useState<AnimationStatus>('dismissed');
+    const [loaded, setLoadedState] = useState<boolean>(false);
+    
     useEffect(() => {
     
         const flutterBundle = document.createElement('script');
@@ -32,6 +34,7 @@ function FlutterWidget(props: {dirName: string, height: number}) {
               })
               
               await appRunner.runApp();
+              setLoadedState(true);
             }
           });
   
@@ -65,12 +68,33 @@ function FlutterWidget(props: {dirName: string, height: number}) {
       };
     }, [status]);
 
+    const loaderStyle = {
+      borderRightColor: 'transparent',
+    };
+
     return (
 
-      <div id='flutter_target' 
-        className={`overflow-visible transition-all duration-[500ms] ${status === 'animating' ? '-translate-y-6 scale-110' : 'translate-y-0 scale-100'} ease-in-out`} 
-        style={{height: height}}  
-      />
+    
+        <>
+          <div className='flex items-center justify-center' >
+            {
+              loaded == false ?
+                <div className="w-10 h-10 border-4 border-black rounded-full animate-spin loader"
+                  style={loaderStyle}
+                /> :
+                null
+            }
+          </div>
+          <div id='flutter_target' 
+          className={`overflow-visible transition-all duration-[500ms] ${status === 'animating' ? '-translate-y-6 scale-110' : 'translate-y-0 scale-100'} ease-in-out`} 
+            style={{height: height}}  
+          />
+        </>
+
+      //   <div id='flutter_target' 
+      //   // className={`overflow-visible transition-all duration-[500ms] ${status === 'animating' ? '-translate-y-6 scale-110' : 'translate-y-0 scale-100'} ease-in-out`} 
+      //   style={{height: height}}  
+      // />
     )
 }
 
