@@ -1,8 +1,8 @@
 ---
 id: 0
 title: 'Hello world'
-date: 1686841200000
-lastmod: '2023-06-15'
+date: 1695819372336
+lastmod: '2023-09-27'
 tags: ['Next.js', 'Flutter', 'Blog']
 draft: false
 summary: 'Flutter 개발자가 Next.js로 만든 블로그'
@@ -31,9 +31,9 @@ import FlutterWidget from '../src/components/FlutterWidget';
 3. 실행의 결과물을 원하는 엘리먼트에 렌더링을 합니다. 엘리먼트를 지정하지 않으면 body에 렌더링을 하게됩니다.
 
 ## Let's try out
-우리는 Next.js로 만든 웹 페이지에 Flutter 위젯을 임베딩 하고 싶습니다. 아래처럼 말이죠.
+아래는 플러터 위젯이 임베디드 된 리액트 컴포넌트 예시입니다.
 <FlutterWidget dirName='HelloNext' height={120}/>
-클릭을 하면 파도타기를 하는 Flutter 위젯입니다. 웹 단에서 점프 애니메이션을 줬습니다. 이번 글에서는 Flutter, Next.js 각각에서 중요하다고 생각했던 부분만 소개를하고
+클릭하면 파도타기하는 애니메이션은 Flutter단에서, 컴포넌트가 점프하는 애니메이션은 리액트 단에서 줬습니다. 이번 글에서는 Flutter, Next.js 각각에서 중요하다고 생각했던 부분만 소개를하고
 전체 코드는 글 아래에 github링크를 달아두겠습니다.
 
 ### Flutter
@@ -123,12 +123,12 @@ export default FlutterWidget;
 ![you can see script tags](/images/0/html.png)
 3. Flutter엔진의 초기화 코드에서 설정한 hostElement의 id와 같은 엘리먼트를 리턴합니다.
 
-++ `declare`키워드를 이용해 _flutter 변수를 미리 선언해줍니다. 그렇지 않으면 컴파일 타임에 _flutter 변수를 찾지못해 빨간 밑줄이 그어집니다. 실행에는 문제가 없지만 시각적으로 거슬리기 때문에 선언해주는 것이 좋습니다.
+++ `declare`키워드를 이용해 _flutter 변수를 미리 선언해줍니다. 그렇지 않으면 컴파일 타임에 _flutter 변수를 찾지못해 빨간 밑줄이 그어집니다. 실행에는 문제가 없지만 시각적으로 거슬리기 때문에 미리 선언해줬습니다.
 
 ## 요약
 1. Flutter web 프로젝트 빌드 결과물을 Next.js프로젝트로 복사 한다.
 2. useEffect 블록에서 Flutter엔진을 실행한다.
-3. 미리 준비한 대상 엘리먼트에 렌더링 한다.
+3. 원하는 엘리먼트에 렌더링 한다.
 <br/><br/>
 
 # 정리
@@ -137,5 +137,5 @@ export default FlutterWidget;
 <br/><br/>
 
 # 링크
-### [HelloNext Flutter프로젝트](localhost:3000)
-### [Shawnthegreat Blog](localhost:3000)
+### [HelloNext Flutter프로젝트](https://github.com/shawn-flunge/blog_examples/blob/main/hello_next/main.dart)
+### [Shawnthegreat Blog](https://github.com/shawn-flunge/blog/tree/main/next)
