@@ -1,16 +1,7 @@
 
+import FrontMatter from '@/interfaces/FrontMatter';
 import Link from 'next/link';
 import { useState, Fragment } from 'react';
-
-export interface FrontMatter {
-    id: number,
-    title: string,
-    summary: string,
-    thumbnail?: string,
-    date: string,
-    tags: string[],
-    time: string,
-}
 
 
 export function BlogCard(matter: FrontMatter){
