@@ -1,18 +1,17 @@
-import fs from 'fs'
-import path from 'path'
+import fs from 'fs';
+import path from 'path';
 
-import { bundleMDX } from 'mdx-bundler'
-import remarkGfm from 'remark-gfm'
-import remarkMath from 'remark-math'
-import rehypePrism from 'rehype-prism'
-import readingTime from 'reading-time'
+import { bundleMDX } from 'mdx-bundler';
+import remarkGfm from 'remark-gfm';
+import remarkMath from 'remark-math';
+import rehypePrism from 'rehype-prism';
+import readingTime from 'reading-time';
 import remarkCodeTitles from './remark/remark-title';
-import remarkExtractFrontmatter from './remark/remark-extract-fromtmatter'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib'
-import matter from 'gray-matter'
-import { FrontMatter } from '../card';
-import { json } from 'stream/consumers'
+import remarkExtractFrontmatter from './remark/remark-extract-fromtmatter';
+import rehypeSlug from 'rehype-slug';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings/lib';
+import matter from 'gray-matter';
+import FrontMatter from '@/interfaces/FrontMatter';
 
 export async function getFileBySlug({slug} : {slug: string}) {
   const mdxPath = path.join(process.cwd(), 'public/posts/', `${slug}.mdx`)
