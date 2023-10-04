@@ -1,7 +1,8 @@
 
 import Head from "next/head";
 import { getFrontmatters } from '../../src/components/mdx'
-import { FrontMatter, BlogCard } from '../../src/components/card'
+import { BlogCard } from '../../src/components/card'
+import FrontMatter from '@/interfaces/FrontMatter';
 
 
 export async function getStaticProps() {
