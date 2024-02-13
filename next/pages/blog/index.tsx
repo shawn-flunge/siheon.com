@@ -21,7 +21,7 @@ export default function Posts({ matters }: { matters: FrontMatter[] }){
     return (
         <>
             <Head>
-                <title>Blog | STG</title>
+                <title>What's your favorite?</title>
             </Head>
             <ul className="container px-2 pt-24 mx-auto">
                 { matters.map((matter) => BlogCard(matter)) }
