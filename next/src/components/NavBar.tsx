@@ -17,7 +17,7 @@ function NavBar(){
 
             <Link key='/' href='/'>
                 <div className="font-mono text-3xl sm:px-4">
-                    Shawn
+                    ShawnIsDev
                 </div>
             </Link>
             
