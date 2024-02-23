@@ -82,7 +82,6 @@ export function getFrontmatters() : FrontMatter[]{
     const { data : frontmatter } = matter(source)
     const time = readingTime(source).text
 
-    frontmatter['time'] = time
     return frontmatter as FrontMatter
   })
 
