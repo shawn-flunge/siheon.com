@@ -16,7 +16,7 @@ export default function Home2({ latest }: { latest: FrontMatter[] }){
         </div>
 
         <div className="mb-12 text-xl font-medium lg:text-2xl">
-            3년차 Flutter 개발자 이시헌 혹은 Shawn 입니다. 사용자에게 신선한 경험을 주기 위해서, 스스로 쉽고 편하게 일하기 위해 끊임없이 고민합니다.
+            3년차 Flutter 개발자 이시헌 혹은 Shawn 입니다. 사용자에게 신선한 경험을 주기 위해서, 스스로 쉽고 편하게 일하기 위해 고민합니다.
         </div>
 
         <div className="mb-4 text-2xl font-semibold lg:text-3xl">
