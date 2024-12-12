@@ -2,8 +2,8 @@
 import fs from 'fs'
 import { GetStaticPaths, GetStaticPropsContext } from "next"
 import Head from 'next/head'
-import { getFileBySlug } from '../../src/components/mdx'
-import MdxComponent from '../../src/components/mdx/MDXComponent';
+import { getFileBySlug } from '../src/components/mdx'
+import MdxComponent from '../src/components/mdx/MDXComponent';
 import { useState, useEffect } from 'react';
 
 

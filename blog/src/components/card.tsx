@@ -11,7 +11,7 @@ export function BlogCard(matter: FrontMatter){
 
     return <Fragment key={matter.id}>
         <li >
-            <Link href={`/blog/${readableTitle}`} className='flex flex-row items-center py-8 border-b cursor-default sm:py-4' onMouseEnter={() => { onHover(true) }} onMouseLeave={() => { onHover(false) }} >
+            <Link href={`/${readableTitle}`} className='flex flex-row items-center py-8 border-b cursor-default sm:py-4' onMouseEnter={() => { onHover(true) }} onMouseLeave={() => { onHover(false) }} >
                 <div className="flex flex-col justify-center grow">
                     <Tags tags={matter.tags}/> 
                     <div className={`cursor-pointer text-4xl sm:text-2xl font-bold mb-4 sm:mb-2 transition-all duration-300 ${hovered ? 'text-orange-400' : 'text-indigo-500 '}`}>{matter.title}</div> 
