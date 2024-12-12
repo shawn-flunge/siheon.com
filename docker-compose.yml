@@ -2,19 +2,19 @@
 version: "3"
 
 networks:
-  blog-network:
+  my-network:
     external: true
 
 services:
-  next:
-    container_name: next
+  blog:
+    container_name: blog
     build:
-      context: ./next
+      context: ./blog
       dockerfile: Dockerfile
     ports:
       - 3000:80
     networks:
-      - blog-network
+      - my-network
 
 
   nginx:
@@ -25,7 +25,7 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
     networks:
-      - blog-network
+      - my-network
 
 
 
