@@ -16,14 +16,14 @@ function NavBar(){
         <nav className="container fixed top-0 left-0 right-0 flex items-center justify-between py-4 mx-auto">
 
             <Link key='/' href='/'>
-                <div className="font-mono text-3xl sm:px-4">
-                    ShawnIsDev
+                <div className="font-mono text-2xl sm:px-4">
+                    Shawn
                 </div>
             </Link>
             
-            <a href="/resume.pdf" download="Flutter개발자 이시헌" className="p-2 ">
+            {/* <a href="/resume.pdf" download="Flutter개발자 이시헌" className="p-2 ">
                 RESUME
-            </a>
+            </a> */}
         </nav>
 
     </>
