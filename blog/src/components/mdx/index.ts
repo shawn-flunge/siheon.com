@@ -84,7 +84,6 @@ export function getFrontmatters() : FrontMatter[]{
 
     return frontmatter as FrontMatter
   })
-
-
+  matters.sort((a, b) => Number.parseInt(b.date)- Number.parseInt(a.date))
   return matters
 }
