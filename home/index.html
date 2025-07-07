@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>이시헌 | Mobile Developer</title>
+  <link href="output.css" rel="stylesheet">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+
+</head>
+<body class="text-gray-800 transition-colors duration-500 bg-gray-50 dark:bg-gray-950 dark:text-gray-100">
+
+  <!-- 네비게이션 바 -->
+  <nav class="sticky top-0 z-50 flex items-center justify-end px-6 py-4 bg-white/70 dark:bg-gray-900/70 backdrop-blur">
+    <ul class="hidden space-x-6 md:flex">
+      <li><a href="#about" class="hover:text-indigo-500">About Me</a></li>
+      <li><a href="#experience" class="hover:text-indigo-500">Experience</a></li>
+      <li><a href="#contact" class="hover:text-indigo-500">Contact</a></li>
+    </ul>
+
+    <button class="flex flex-col justify-center" onclick="toggleTheme()">
+      <input type="checkbox" name="light-switch" class="sr-only light-switch" />
+      
+      <label class="relative my-2 ml-4 cursor-pointer" for="light-switch">
+          <svg class="dark:hidden" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path class="fill-slate-300" d="M7 0h2v2H7zM12.88 1.637l1.414 1.415-1.415 1.413-1.413-1.414zM14 7h2v2h-2zM12.95 14.433l-1.414-1.413 1.413-1.415 1.415 1.414zM7 14h2v2H7zM2.98 14.364l-1.413-1.415 1.414-1.414 1.414 1.415zM0 7h2v2H0zM3.05 1.706 4.463 3.12 3.05 4.535 1.636 3.12z" />
+              <path class="fill-slate-400" d="M8 4C5.8 4 4 5.8 4 8s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4Z" />
+          </svg>
+          <svg class="hidden dark:block" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <path class="fill-slate-400" d="M6.2 1C3.2 1.8 1 4.6 1 7.9 1 11.8 4.2 15 8.1 15c3.3 0 6-2.2 6.9-5.2C9.7 11.2 4.8 6.3 6.2 1Z" />
+              <path class="fill-slate-500" d="M12.5 5a.625.625 0 0 1-.625-.625 1.252 1.252 0 0 0-1.25-1.25.625.625 0 1 1 0-1.25 1.252 1.252 0 0 0 1.25-1.25.625.625 0 1 1 1.25 0c.001.69.56 1.249 1.25 1.25a.625.625 0 1 1 0 1.25c-.69.001-1.249.56-1.25 1.25A.625.625 0 0 1 12.5 5Z" />
+          </svg>
+          <span class="sr-only">Switch to light / dark version</span>
+      </label>
+    </button>
+    
+    <button id="menu-toggle" class="ml-4 md:hidden focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+    </button>
+    
+  </nav>
+
+  <!-- 오버레이 메뉴(햄버거) -->
+  <div id="mobile-menu" class="fixed top-0 left-0 z-50 flex flex-col items-center justify-center hidden w-full h-full space-y-8 bg-white/60 dark:bg-gray-900/60 backdrop-blur">
+    <button onclick="toggleMenu()" class="absolute text-3xl top-4 right-6 hover:text-indigo-500">
+      ×
+    </button>
+    <a href="#about" class="text-2xl hover:text-indigo-500" onclick="toggleMenu()">About Me</a>
+    <a href="#experience" class="text-2xl hover:text-indigo-500" onclick="toggleMenu()">Experience</a>
+    <a href="#contact" class="text-2xl hover:text-indigo-500" onclick="toggleMenu()">Contact</a>
+  </div>
+
+
+  
+  <section id="about" class="flex flex-col items-center justify-center h-screen text-center">
+    <h1 class="mb-4 text-5xl font-bold">이시헌</h1>
+    <p class="mb-2 text-2xl text-gray-700 dark:text-gray-300">Mobile Developer | Flutter</p>
+    <p class="mb-8 text-xl text-gray-500 dark:text-gray-400">재밌는걸 만드는 사람</p>
+    <div class="flex space-x-5">
+      <a href="https://github.com/shawn-flunge" target="_blank" class="flex items-center space-x-2 transition-transform duration-200 transform hover:scale-110">
+        <img class="invert-0 dark:invert" src="public/images/github.svg"> <span class="ml-4">Github</span>  
+      </a>
+      <a href="https://blog.siheon.com" target="_blank" class="flex items-center space-x-1 transition-transform duration-200 transform hover:scale-110">
+        <img class="invert-0 dark:invert" src="public/images/blog.svg">
+        <span>Blog</span>
+      </a>
+    </div>
+
+    <div class="absolute text-3xl text-gray-400 bottom-8 animate-bounce">
+      ↓
+    </div>
+  </section>
+
+
+  <section id="experience" class="flex flex-col py-10 px-14 max-sm:px-4">
+
+    <p class="text-5xl max-sm:text-4xl">
+      Company Experience<span class="text-indigo-500">.</span>
+    </p>
+    <!-- 경력 리스트 뷰 -->
+    <div class="w-full py-4">
+      <!-- 인엑스 -->
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div class="lg:flex-[40%] w-full">
+          <p class="text-[28px]/8 mb-2">인피니티<br>익스체인지코리아</p>
+          <p>암호화폐 거래소 INEX</p>
+          <p>2024.02 - 2025.03</p>
+        </div>
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>GetX, freezed</p>
+          </span>
+          <span class="flex my-1 space-x-2">
+            <img src="public/images/list_check.svg">
+            <a class="flex" href="https://drive.google.com/drive/folders/1x0HBzJrTIjEMBpNpozrjmGcCB2EZUSgA?usp=drive_link" target="_blank">캔들차트 개발 <img src="public/images/external_link.svg" class="w-5 mx-2"> </a>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>개발자 모드, Flavor 도입</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>코인 검색 필터(한글, 초성, 알파벳)</p>
+          </span>
+        </div>
+      </div>     
+
+      <!-- 플린트 -->
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div class="lg:flex-[40%] w-full">
+          <p class="text-[28px]/8 mb-2">알투브이</p>
+          <p>암호화폐 펀드 서비스 Flynt</p>
+          <p>2022.02 - 2023.12</p>
+        </div>
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Provider, freezed, get_it</p>
+          </span>
+          <span class="flex my-1 space-x-2">
+            <img src="public/images/list_check.svg">
+            <a class="flex" href="https://drive.google.com/drive/folders/1uLd94B_imrn3MN_oIWRfBZ0QliBBXFSg?usp=drive_link" target="_blank">상품별 맞춤 차트 개발<img src="public/images/external_link.svg" class="w-5 mx-2"> </a>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>다국어(한국어, 영어, 일본어, 중국어) 지원</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>코인 검색 필터(한글, 초성, 알파벳)</p>
+          </span>
+        </div>
+      </div>
+
+      <!-- 빌리지피플 -->
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div class="lg:flex-[40%] w-full">
+          <p class="text-[28px]/8 mb-2">빌리지피플</p>
+          <p>반려동물 커뮤니티 와글와글</p>
+          <p>2021.02 - 2021.09</p>
+        </div>
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Bloc</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Google Maps Sdk활용한 산책 트랙킹 기능</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>딥링크 도입</p>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    
+    <p class="mt-20 text-5xl max-sm:text-4xl">
+      Personal Experience<span class="text-indigo-500">.</span>
+    </p>
+    <!-- 개인 리스트 뷰 -->
+    <div class="w-full py-4">
+      <!-- 루티 -->
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div class="lg:flex-[40%] w-full">
+          <p class="text-[28px]/8 mb-2">Rooty</p>
+          <p>한국어 어휘학습 서비스 루티</p>
+          <p>2025.04 - </p>
+
+          <div class="flex mt-2 space-x-2">
+            <a href="https://play.google.com/store/apps/details?id=com.rootyverse.rooty.app&pcampaignid=web_share" target="_blank">
+              <img src="public/images/logo_play_store.svg">  
+            </a>
+            <a href="https://apps.apple.com/kr/app/rooty-어휘-학습/id6746859444" target="_blank">
+              <img src="public/images/logo_app_store.svg">  
+            </a>
+            <a href="https://github.com/shawn-flunge/rooty" target="_blank">
+              <img class="invert-0 dark:invert" src="public/images/github.svg">  
+            </a>
+          </div> 
+        </div>
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Riverpod, Clean Architecture, freezed</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Supabase사용하는 서버리스 앱</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>다국어(한국어, 영어) 지원</p>
+          </span>
+          
+        </div>
+      </div>
+
+      <!-- localify -->
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+        <div class="lg:flex-[40%] w-full">
+          <p class="text-[28px]/8 mb-2">Localify</p>
+          <p>다국어 협업 툴</p>
+          <p>2022.02 - 2023.12</p>
+
+          <div class="flex my-2 space-x-2">
+            <a href="https://pub.dev/packages/localify" target="_blank">
+              <img src="public/images/logo_dart.svg">  
+            </a>
+            <a href="https://github.com/shawn-flunge/localify" target="_blank">
+              <img class="invert-0 dark:invert" src="public/images/github.svg">  
+            </a>
+          </div>
+          
+          
+          
+        </div>
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Dart CLI program</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Google Spread Sheets 파싱해 arb, json로 변환</p>
+          </span>
+        </div>
+      </div>
+    </div>
+    
+
+  </section>
+
+  <section id="contact" class="flex flex-col items-center justify-center h-screen px-4 py-20 text-center">
+    <!-- 이메일 -->
+    <p class="mb-6 text-4xl sm:text-3xl">echun1234@gmail.com</p>
+
+    <!-- 슬로건 -->
+    <p class="mb-3 text-3xl font-semibold sm:text-2xl">Be Interactive, Get Creative</p>
+
+    <!-- 슬로건 설명 -->
+    <p class="max-w-xl mb-10 text-lg text-gray-600 dark:text-gray-400">
+      재미있고 창의적인 것, 제가 추구하는 개발의 방향입니다.
+    </p>
+
+    <!-- 푸터 -->
+    
+  </section>
+
+  <footer class="w-full p-20 text-sm text-gray-400 bg-slate-900">
+      © 2025 Siheon Lee. All rights reserved.
+  </footer>
+  
+  
+
+  <script type="text/javascript">
+
+    if (localStorage.getItem('dark-mode') === 'true' || (!('dark-mode' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.querySelector('html').classList.add('dark');
+    } else {
+        document.querySelector('html').classList.remove('dark');
+    }
+
+		function toggleTheme(){
+      document.documentElement.classList.toggle('dark')
+		}
+
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function toggleMenu() {
+      mobileMenu.classList.toggle('hidden');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+
+	</script>
+</body>
+</html>
