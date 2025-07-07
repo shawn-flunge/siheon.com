@@ -5,6 +5,15 @@ networks:
     external: true
 
 services:
+
+  home:
+    container_name: home
+    build: 
+      context: ./home
+      dockerfile: Dockerfile
+    networks:
+      - my-network
+
   blog:
     container_name: blog
     build:
