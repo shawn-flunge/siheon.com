@@ -168,26 +168,71 @@
       Personal Experience<span class="text-indigo-500">.</span>
     </p>
     <!-- 개인 리스트 뷰 -->
-    <div class="w-full py-4">
+    <div class="w-full py-6">
+      <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
+
+        <!-- 아이콘 + 좌측 설명 묶음 -->
+        <div class="flex flex-row space-x-4 lg:flex-[40%] w-full">
+          <img src="public/images/thatday_icon.png"
+              class="w-32 h-32 shadow-lg shrink-0 rounded-2xl"/>
+
+          <div class="flex flex-col">
+            <p class="text-[28px]/8 mb-2">Thatday</p>
+            <p>목표 주도 태스크 관리 서비스</p>
+            <p>2025.11 - </p>
+
+            <div class="flex mt-2 space-x-2">
+              <a href="https://play.google.com/store/apps/details?id=com.thatdayisyours.app.that_day" target="_blank">
+                <img src="public/images/logo_play_store.svg">  
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 우측 기술 리스트 -->
+        <div class="lg:flex-[60%] text-base">
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Bloc, Clean Architecture</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>Drift 기반 Local-first 서비스</p>
+          </span>
+          <span class="flex my-1 space-x-2 ">
+            <img src="public/images/list_check.svg">
+            <p>다국어(한국어, 영어) 지원</p>
+          </span>
+        </div>
+
+      </div>
+
+      
       <!-- 루티 -->
       <div class="flex flex-col w-full my-12 space-y-4 lg:flex-row lg:space-x-8 lg:space-y-0">
-        <div class="lg:flex-[40%] w-full">
-          <p class="text-[28px]/8 mb-2">Rooty</p>
-          <p>한국어 어휘학습 서비스 루티</p>
-          <p>2025.04 - </p>
+        
+        <div class="flex flex-row space-x-4 lg:flex-[40%] w-full">
+          <img src="public/images/rooty_icon.png"
+              class="w-32 h-32 shadow-lg shrink-0 rounded-2xl"/>
+          <div class="lg:flex-[40%] w-full">
+            <p class="text-[28px]/8 mb-2">Rooty</p>
+            <p>한국어 어휘학습 서비스 루티</p>
+            <p>2025.04 - </p>
 
-          <div class="flex mt-2 space-x-2">
-            <a href="https://play.google.com/store/apps/details?id=com.rootyverse.rooty.app&pcampaignid=web_share" target="_blank">
-              <img src="public/images/logo_play_store.svg">  
-            </a>
-            <a href="https://apps.apple.com/kr/app/rooty-어휘-학습/id6746859444" target="_blank">
-              <img src="public/images/logo_app_store.svg">  
-            </a>
-            <a href="https://github.com/shawn-flunge/rooty" target="_blank">
-              <img class="invert-0 dark:invert" src="public/images/github.svg">  
-            </a>
-          </div> 
+            <div class="flex mt-2 space-x-2">
+              <a href="https://play.google.com/store/apps/details?id=com.rootyverse.rooty.app&pcampaignid=web_share" target="_blank">
+                <img src="public/images/logo_play_store.svg">  
+              </a>
+              <a href="https://apps.apple.com/kr/app/rooty-어휘-학습/id6746859444" target="_blank">
+                <img src="public/images/logo_app_store.svg">  
+              </a>
+              <a href="https://github.com/shawn-flunge/rooty" target="_blank">
+                <img class="invert-0 dark:invert" src="public/images/github.svg">  
+              </a>
+            </div> 
+          </div>     
         </div>
+        
         <div class="lg:flex-[60%] text-base">
           <span class="flex my-1 space-x-2 ">
             <img src="public/images/list_check.svg">
@@ -195,7 +240,7 @@
           </span>
           <span class="flex my-1 space-x-2 ">
             <img src="public/images/list_check.svg">
-            <p>Supabase사용하는 서버리스 앱</p>
+            <p>Supabase사용하는 서버리스 서비스</p>
           </span>
           <span class="flex my-1 space-x-2 ">
             <img src="public/images/list_check.svg">
